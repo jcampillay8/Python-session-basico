@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .contenedor{
+            width: 90%;
+            max-width: 500px;
+            margin: auto;
+            margin-top: 20px;
+            padding: 20px;
+            display: flex;
+            justify-content: space-around;
+            border: 2px solid black;
+        }
+        .row1{
+            text-align: center;
+        }
+        .row2{
+            text-align: center;
+        }
+        .row3{
+            display: flex;
+            justify-content: center;
+        }
+
+        .row3 button{
+            width: 100px;
+            background-color: rgb(78, 78, 250);
+            color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="contendedor">
+        <div class="row1">
+            <h1>Contador</h1>
+        </div>
+        <div class="row2">
+            <h2>{{ session['contador'] }}</h2>
+        </div>
+        <div class="row3">
+            <form action="/masdos" method='post'>
+                <button> +2 </button>
+            </form>
+            <form action="/reseteo" method='post'>
+                <button>Reseteo</button>
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>
+
